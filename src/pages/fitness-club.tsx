@@ -174,6 +174,25 @@ export default function FitnessClub() {
           </div>
         </div>
       )}
+
+      {/* ── FLOATING WHATSAPP ── */}
+      <a
+        href="https://wa.me/919665861956"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat on WhatsApp"
+        className="fixed bottom-6 right-6 w-16 h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(37,211,102,0.5)] z-50 hover:scale-110 transition-transform hover:bg-[#128C7E]"
+      >
+        <span className="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-75" />
+        <span className="relative z-10">
+          {/* simple icon without importing more components */}
+          <svg viewBox="0 0 32 32" width="32" height="32" fill="currentColor" aria-hidden="true">
+            <path d="M19.07 16.07c-.21-.1-1.24-.6-1.43-.68-.19-.07-.33-.1-.47.1-.14.21-.54.68-.66.82-.12.14-.24.16-.45.06-.21-.1-.9-.33-1.71-1.06-.63-.56-1.05-1.25-1.17-1.46-.12-.21-.01-.32.09-.42.08-.08.18-.21.27-.32.09-.11.12-.19.19-.32.07-.14.03-.27-.02-.38-.05-.1-.47-1.15-.64-1.58-.17-.41-.34-.35-.47-.36h-.4c-.14 0-.38.05-.58.26-.2.21-.77.75-.77 1.83s.79 2.13.9 2.28c.11.16 1.58 2.41 3.83 3.38.53.23.95.37 1.27.47.53.17 1.01.15 1.39.09.42-.07 1.24-.5 1.41-.99.17-.49.17-.91.12-.99-.05-.08-.19-.12-.4-.22Z"/>
+            <path d="M16 2C8.82 2 3 7.82 3 15c0 2.65.79 5.11 2.14 7.17L4 30l8.01-1.12A12.92 12.92 0 0 0 16 28c7.18 0 13-5.82 13-13S23.18 2 16 2Zm0 24c-1.88 0-3.63-.54-5.11-1.48l-.34-.22-4.65.65.67-4.5-.23-.35A10.96 10.96 0 0 1 5 15C5 8.93 10 3.98 16 3.98S27 8.93 27 15 22 26 16 26Z"/>
+          </svg>
+        </span>
+      </a>
+
     </div>
   );
 }

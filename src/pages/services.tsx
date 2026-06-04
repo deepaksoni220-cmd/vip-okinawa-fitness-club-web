@@ -87,8 +87,8 @@ export default function Services() {
                 State-of-the-art equipment, certified trainers, and a results-driven environment. Train smart. Stay strong. Be unstoppable.
               </p>
             </div>
-            <div className="flex-shrink-0 hidden md:block">
-              <img src="/gym-banner-1.png" alt="Gym Icon" className="w-64 h-64 object-cover rounded-sm border border-white/10 shadow-xl" />
+            <div className="flex-shrink-0 mx-auto w-full max-w-[280px] md:max-w-[256px]">
+              <img src="/gym-banner-1.png" alt="Gym Icon" className="w-full h-auto object-cover rounded-sm border border-white/10 shadow-xl" />
             </div>
           </div>
 
@@ -217,8 +217,8 @@ export default function Services() {
                 Okinawa Goju-Ryu Karate training for Men, Women &amp; Children. Build strength, discipline, and confidence under certified instruction.
               </p>
             </div>
-            <div className="flex-shrink-0 hidden md:block">
-              <img src="/oky001.jpeg" alt="Karate Icon" className="w-64 h-64 object-cover rounded-sm border border-white/10 shadow-xl" />
+            <div className="flex-shrink-0 mx-auto w-full max-w-[280px] md:max-w-[256px]">
+              <img src="/oky001.jpeg" alt="Karate Icon" className="w-full h-auto object-cover rounded-sm border border-white/10 shadow-xl" />
             </div>
           </div>
 
