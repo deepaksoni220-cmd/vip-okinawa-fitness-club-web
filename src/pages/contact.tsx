@@ -147,7 +147,9 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-heading font-bold uppercase text-sm mb-1">Email</h4>
-                    <a href="mailto:info@okinawafitness.com" className="text-gray-400 text-sm hover:text-primary transition-colors">info@okinawafitness.com</a>
+<a href="mailto:okinawafitness11@gmail.com" className="text-gray-400 text-sm hover:text-primary transition-colors">okinawafitness11@gmail.com</a>
+                  <br />
+                  <a href="mailto:okinawamma12@gmail.com" className="text-gray-400 text-sm hover:text-primary transition-colors">okinawamma12@gmail.com</a>
                   </div>
                 </div>
                 <div className="glass-card p-6 flex gap-4 items-start">

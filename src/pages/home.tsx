@@ -30,7 +30,7 @@ export default function Home() {
     e.preventDefault();
     const subject = "Okinawa Fitness Consultation Request";
     const body = `Name: ${name}\nPhone: ${phone}\nEmail: ${email}\nFitness Goal: ${goal}\n\nPlease contact me for a free consultation and facility tour.`;
-    const mailto = `mailto:okinawamma12@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const mailto = `mailto:okinawamma12@gmail.com&okinawafitness11@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     window.location.href = mailto;
     toast.success("Opening your email client...", { description: "Send the email to complete your request." });
   };
@@ -91,15 +91,16 @@ export default function Home() {
 
       {/* ── HERO ── */}
       <section className="relative h-screen flex items-center pt-20" id="home">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/60 to-black/20 z-10" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent z-10" />
+        <div className="absolute inset-x-0 bottom-0 top-[129px] md:top-0 z-0">
           <picture>
-            <source media="(max-width: 767px)" srcSet="/oky1banner.webp" />
+            <source
+              media="(max-width: 767px)"
+              srcSet="/oki-nawa-banner2.webp"
+            />
             <img
-              src="/oky2banner.webp"
+              src="/oki-nawa-banner1.webp"
               alt="Okinawa Fitness Gym"
-              className="w-full h-full object-cover object-right opacity-100"
+              className="w-full h-full object-cover object-top md:object-center"
             />
           </picture>
         </div>
@@ -107,20 +108,7 @@ export default function Home() {
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-[120px] z-0 floating-orb" />
         <div className="container mx-auto px-4 relative z-20">
           <div className="max-w-3xl">
-            <div className="flex flex-wrap gap-x-4 mb-6">
-              <span className="px-3 py-1 bg-primary/20 text-primary border border-primary/50 text-xs font-bold uppercase tracking-widest rounded-sm">Premium Gym</span>
-              <span className="px-3 py-1 bg-secondary/20 text-secondary border border-secondary/50 text-xs font-bold uppercase tracking-widest rounded-sm">Pune, India</span>
-            </div>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-black leading-[0.95] mb-6 uppercase tracking-tight">
-              <span className="block overflow-hidden"><span className="hero-title-word inline-block">Transform</span></span>
-              <span className="block overflow-hidden"><span className="hero-title-word inline-block">Your <span className="text-primary text-glow">Body.</span></span></span>
-              <span className="block overflow-hidden"><span className="hero-title-word inline-block">Unlock</span></span>
-              <span className="block overflow-hidden"><span className="hero-title-word inline-block">Your <span className="text-secondary gold-glow">Potential.</span></span></span>
-            </h1>
-            <p className="hero-subtitle text-lg md:text-xl text-gray-300 mb-10 max-w-xl font-light">
-              Raw discipline meets elite performance. Premium Gym, MMA Training &amp; Karate Classes for those who want results, not comfort.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="hidden">
               <a href="#memberships">
                 <Button size="lg" className="hero-btn w-full sm:w-auto bg-primary hover:bg-red-700 text-white font-heading text-xl uppercase tracking-wider rounded-none h-14 px-8">Join Now</Button>
               </a>
@@ -299,10 +287,12 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               { name: "MMA Training", time: "Mon, Wed, Fri • 6:30 PM", trainer: "Coach Ravi", level: "All Levels" },
-              { name: "Kyokushin Karate", time: "Tue, Thu, Sat • 5:00 PM", trainer: "Sensei Hiroshi", level: "Intermediate" },
+              { name: "Okinawa Goju-Ryu Karate", time: "Tue, Thu, Sat • 5:00 PM", trainer: "Sensei Hiroshi", level: "Intermediate" },
+
               { name: "Strength & Cond.", time: "Daily • 7:00 AM & 7:00 PM", trainer: "Coach Priya", level: "Advanced" },
               { name: "Fat Loss Circuit", time: "Mon - Fri • 8:00 AM", trainer: "Coach Amit", level: "Beginner" },
-              { name: "Boxing Drills", time: "Tue, Thu • 6:00 PM", trainer: "Coach Ravi", level: "All Levels" },
+              { name: "Kickboxing Drills", time: "Tue, Thu • 6:00 PM", trainer: "Coach Ravi", level: "All Levels" },
+
               { name: "Functional Training", time: "Sat • 9:00 AM", trainer: "Coach Priya", level: "All Levels" },
             ].map((c, i) => (
               <div key={i} className="glass-card p-6 border-l-4 border-l-primary group cursor-pointer hover:bg-white/5 transition-colors">
@@ -360,8 +350,54 @@ export default function Home() {
           <p className="text-center text-gray-400 mb-14 text-sm font-medium">Special discounts available for students &amp; group enrollments</p>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            {/* Personal Training */}
+            <div className="glass-card p-7 group hover:-translate-y-2 transition-transform duration-300">
+              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
+                <FaDumbbell className="text-primary text-xl" />
+              </div>
+              <h4 className="font-heading font-bold text-xl uppercase mb-1 text-gray-300">Personal Training</h4>
+              <p className="text-xs text-gray-500 uppercase tracking-widest mb-5">Monthly</p>
+              <div className="flex items-baseline gap-1 mb-6">
+                <span className="text-3xl font-heading font-black text-white">₹10,000</span>
+                <span className="text-gray-500 text-sm font-medium">/-</span>
+              </div>
+              <ul className="space-y-3 mb-8 text-sm">
+                <li className="flex items-center gap-3 text-gray-300"><FaCheck className="text-primary shrink-0" /> Dedicated 1-on-1 coaching</li>
+                <li className="flex items-center gap-3 text-gray-300"><FaCheck className="text-primary shrink-0" /> Custom workout plan</li>
+                <li className="flex items-center gap-3 text-gray-300"><FaCheck className="text-primary shrink-0" /> Nutrition guidance</li>
+                <li className="flex items-center gap-3 text-gray-300"><FaCheck className="text-primary shrink-0" /> Progress tracking</li>
+              </ul>
+              <Button asChild variant="outline" className="w-full rounded-none border-white/20 text-white hover:bg-white hover:text-black uppercase tracking-wider font-bold text-xs h-10">
+                <a href={waLink("Hi! I'm interested in Personal Training (1-on-1) monthly membership for ₹10,000. Please share joining details.")} target="_blank" rel="noopener noreferrer">Join Now</a>
+              </Button>
+            </div>
+
+            {/* Group Personal Training */}
+            <div className="glass-card p-7 border-secondary/30 group hover:-translate-y-2 transition-transform duration-300">
+              <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center mb-5 group-hover:bg-secondary/20 transition-colors">
+                <FaDumbbell className="text-secondary text-xl" />
+              </div>
+              <h4 className="font-heading font-bold text-xl uppercase mb-1 text-secondary">Group Personal Training</h4>
+              <p className="text-xs text-gray-500 uppercase tracking-widest mb-5">Monthly</p>
+              <div className="flex items-baseline gap-1 mb-1">
+                <span className="text-3xl font-heading font-black text-white">₹5,000</span>
+                <span className="text-gray-500 text-sm font-medium">/-</span>
+              </div>
+              <p className="text-xs text-secondary mb-5 font-medium">Per member</p>
+              <ul className="space-y-3 mb-8 text-sm">
+                <li className="flex items-center gap-3 text-gray-300"><FaCheck className="text-secondary shrink-0" /> Small batch personal coaching</li>
+                <li className="flex items-center gap-3 text-gray-300"><FaCheck className="text-secondary shrink-0" /> Technique correction</li>
+                <li className="flex items-center gap-3 text-gray-300"><FaCheck className="text-secondary shrink-0" /> Shared training plan</li>
+                <li className="flex items-center gap-3 text-gray-300"><FaCheck className="text-secondary shrink-0" /> Group progress tracking</li>
+              </ul>
+              <Button asChild variant="outline" className="w-full rounded-none border-secondary text-secondary hover:bg-secondary hover:text-black uppercase tracking-wider font-bold text-xs h-10">
+                <a href={waLink("Hi! I'm interested in Group Personal Training monthly membership for ₹5,000 per member. Please share joining details.")} target="_blank" rel="noopener noreferrer">Join Now</a>
+              </Button>
+            </div>
+
             {/* Monthly */}
             <div className="glass-card p-7 group hover:-translate-y-2 transition-transform duration-300">
+
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
                 <FaClock className="text-primary text-xl" />
               </div>
@@ -568,7 +604,7 @@ export default function Home() {
                   <span>987, Jawaharlal Nehru Rd, New Nana Peth, Ganesh Peth, Pune, Maharashtra 411002</span>
                 </li>
                 <li className="flex items-center gap-3"><FaPhoneAlt className="text-primary shrink-0" /><span>+91 96658 61956</span></li>
-                <li className="flex items-center gap-3"><FaEnvelope className="text-primary shrink-0" /><span>info@okinawafitness.com</span></li>
+<li className="flex items-center gap-3"><FaEnvelope className="text-primary shrink-0" /><span>okinawamma12@gmail.com</span></li>
               </ul>
               <a href="https://wa.me/919665861956" target="_blank" rel="noopener noreferrer"
                 className="mt-6 inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white text-sm font-bold uppercase tracking-wider px-4 py-3 transition-colors rounded-md">

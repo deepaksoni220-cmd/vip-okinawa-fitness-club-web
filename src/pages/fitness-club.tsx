@@ -58,8 +58,8 @@ export default function FitnessClub() {
         <div className="container mx-auto px-4 relative z-20">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-black leading-[0.95] mb-6 uppercase tracking-tight">
-              <span className="block overflow-hidden"><span className="club-hero-title inline-block">Explore</span></span>
-              <span className="block overflow-hidden"><span className="club-hero-title inline-block">Okinawa <span className="text-primary">Fitness</span></span></span>
+              <span className="block overflow-hidden"><span className="club-hero-title inline-block">Okinawa Martial Art</span></span>
+              <span className="block overflow-hidden"><span className="club-hero-title inline-block"><span className="text-primary">Classes</span></span></span>
             </h1>
             <p className="club-hero-subtitle text-lg md:text-xl text-gray-300 mb-10 max-w-xl font-light">
               State-of-the-art facilities, expert trainers, and a community dedicated to your fitness journey in Pune.
@@ -96,7 +96,7 @@ export default function FitnessClub() {
               "/oky/5.jpg",
               "/oky/7.jpg",
               "/oky/9.jpg",
-              "/oky/oky0.jpg",
+
               "/oky/oky00.jpeg",
             ].map((img, i) => (
               <div key={i} className="club-img overflow-hidden rounded-sm border border-white/10 h-48 group hover:border-primary/50 transition-colors cursor-pointer" onClick={() => setSelectedImage(img)}>

@@ -12,6 +12,20 @@ function waLink(message: string) {
 
 const gymPlans = [
   {
+    label: "Personal Training",
+    price: "₹10,000",
+    duration: "Monthly",
+    features: ["Dedicated 1-on-1 coaching", "Custom workout plan", "Nutrition guidance", "Progress tracking"],
+    highlight: false,
+  },
+  {
+    label: "Group Personal Training",
+    price: "₹5,000",
+    duration: "Monthly",
+    features: ["Small batch personal coaching", "Technique correction", "Shared training plan", "Group progress tracking"],
+    highlight: false,
+  },
+  {
     label: "Monthly",
     price: "₹1,200",
     duration: "1 Month",
@@ -162,6 +176,27 @@ export default function Services() {
             ))}
           </div>
 
+          <div className="mt-10 flex justify-center">
+            <div className="glass-card w-full max-w-3xl p-8 border border-secondary/30 bg-[#0d0d0d] shadow-[0_0_30px_rgba(255,255,255,0.05)]">
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+                <div>
+                  <p className="text-secondary font-bold tracking-widest uppercase text-xs mb-2">Okinawa Personal Training</p>
+                  <h4 className="text-3xl font-heading font-black uppercase mb-3">Monthly Memberships</h4>
+                  <p className="text-gray-400 max-w-xl text-sm leading-relaxed">
+                    Dedicated 1-on-1 training for <span className="text-white font-bold">₹10,000/month</span> and group personal coaching for <span className="text-white font-bold">₹5,000/month</span> per member.
+                  </p>
+                </div>
+                <a
+                  href={waLink("Hi! I'm interested in Okinawa Personal Training monthly memberships for ₹10,000 and/or Group Personal Training for ₹5,000 per member. Please share joining details.")}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 rounded-md bg-secondary hover:bg-yellow-500 text-black font-black uppercase tracking-wider text-sm px-6 py-4 transition-colors duration-300"
+                >
+                  <FaWhatsapp size={18} /> Join Us Now
+                </a>
+              </div>
+            </div>
+          </div>
           <div className="mt-10 flex justify-center">
             <div className="glass-card w-full max-w-3xl p-8 border border-secondary/30 bg-[#0d0d0d] shadow-[0_0_30px_rgba(255,255,255,0.05)]">
               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
