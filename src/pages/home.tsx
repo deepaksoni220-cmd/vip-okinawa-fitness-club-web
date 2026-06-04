@@ -549,9 +549,9 @@ export default function Home() {
                 Where raw discipline meets elite performance. Pune's premier destination for combat sports and fitness.
               </p>
               <div className="flex gap-4">
-                <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary transition-colors cursor-pointer text-xs font-bold">IN</div>
-                <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary transition-colors cursor-pointer text-xs font-bold">FB</div>
-                <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary transition-colors cursor-pointer text-xs font-bold">YT</div>
+                <a href="https://www.instagram.com/okinawafitness_?igsh=MTlxa3NydnpiemNlaQ==" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary transition-colors cursor-pointer text-xs font-bold">IN</a>
+                <a href="https://www.facebook.com/okinawafitness" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary transition-colors cursor-pointer text-xs font-bold">FB</a>
+                <a href="https://www.youtube.com/@okinawafitness" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary transition-colors cursor-pointer text-xs font-bold">YT</a>
               </div>
             </div>
             <div>
