@@ -95,9 +95,9 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/60 to-black/20 z-10" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent z-10" />
           <picture>
-            <source media="(max-width: 767px)" srcSet="/okybanar.webp" />
+            <source media="(max-width: 767px)" srcSet="/oky1banner.webp" />
             <img
-              src="/bannerweb.webp"
+              src="/oky2banner.webp"
               alt="Okinawa Fitness Gym"
               className="w-full h-full object-cover object-right opacity-100"
             />
@@ -123,9 +123,6 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="#memberships">
                 <Button size="lg" className="hero-btn w-full sm:w-auto bg-primary hover:bg-red-700 text-white font-heading text-xl uppercase tracking-wider rounded-none h-14 px-8">Join Now</Button>
-              </a>
-              <a href="#contact">
-                <Button size="lg" variant="outline" className="hero-btn w-full sm:w-auto border-primary text-primary hover:bg-primary hover:text-black font-heading text-sm uppercase tracking-wider rounded-none h-14 px-6">Free Trial</Button>
               </a>
               <a href="https://wa.me/919665861956" target="_blank" rel="noopener noreferrer">
                 <Button size="lg" className="hero-btn w-full sm:w-auto bg-[#25D366] hover:bg-[#128C7E] text-white font-heading text-sm uppercase tracking-wider rounded-md h-14 px-6">
