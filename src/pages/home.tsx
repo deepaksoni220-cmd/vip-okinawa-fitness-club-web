@@ -120,7 +120,27 @@ export default function Home() {
             </div>
           </div>
         </div>
+
         {/* Banner uploader removed */}
+      </section>
+
+      {/* ── PROMO BANNER ── */}
+      <section className="relative z-20 bg-black overflow-hidden">
+        <img
+          src="/banr2.webp"
+          alt="Okinawa Fitness Banner"
+          className="hidden md:block w-full h-auto object-cover"
+        />
+        <img
+          src="/okyy0y1.png"
+          alt="Okinawa Fitness Banner"
+          className="block md:hidden w-[calc(100%+8px)] max-w-none -translate-x-1 h-auto object-cover"
+        />
+        <div className="absolute inset-0 flex items-start justify-center bg-gradient-to-b from-black/75 via-black/10 to-transparent px-4 pt-6 text-center md:items-center md:bg-gradient-to-r md:from-black/75 md:via-black/20 md:to-transparent md:px-16 md:pt-0">
+          <h2 className="max-w-[12ch] font-heading text-3xl font-black uppercase leading-tight text-white drop-shadow-[0_4px_18px_rgba(0,0,0,0.9)] sm:text-4xl md:max-w-[11ch] md:text-6xl lg:text-7xl">
+            Okinawa Martial Arts Classes
+          </h2>
+        </div>
       </section>
 
       {/* ── STATS ── */}
