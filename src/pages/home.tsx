@@ -90,23 +90,23 @@ export default function Home() {
       <Navbar />
 
       {/* ── HERO ── */}
-      <section className="relative h-screen flex items-center pt-20" id="home">
-        <div className="absolute inset-x-0 bottom-0 top-[129px] md:top-0 z-0">
-          <picture>
+      <section className="relative pt-32 md:h-screen md:flex md:items-center md:pt-20" id="home">
+        <div className="relative z-0 overflow-hidden md:absolute md:inset-x-0 md:bottom-0 md:top-0">
+          <picture className="block h-auto w-full md:h-full">
             <source
               media="(max-width: 767px)"
-              srcSet="/oki-nawa-banner2.webp"
+              srcSet="/oki-nawa-banner2.png"
             />
             <img
               src="/oki-nawa-banner1.webp"
               alt="Okinawa Fitness Gym"
-              className="w-full h-full object-cover object-top md:object-center"
+              className="h-auto w-full object-cover object-top md:h-full md:object-center"
             />
           </picture>
         </div>
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/20 rounded-full blur-[100px] z-0 floating-orb" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-[120px] z-0 floating-orb" />
-        <div className="container mx-auto px-4 relative z-20">
+        <div className="absolute top-1/4 left-1/4 hidden w-64 h-64 bg-primary/20 rounded-full blur-[100px] z-0 floating-orb md:block" />
+        <div className="absolute bottom-1/4 right-1/4 hidden w-96 h-96 bg-secondary/10 rounded-full blur-[120px] z-0 floating-orb md:block" />
+        <div className="container mx-auto hidden px-4 relative z-20 md:block">
           <div className="max-w-3xl">
             <div className="hidden">
               <a href="#memberships">
@@ -122,6 +122,15 @@ export default function Home() {
         </div>
 
         {/* Banner uploader removed */}
+      </section>
+
+      {/* ── MOBILE HERO FOLLOW-UP ── */}
+      <section className="relative z-20 overflow-hidden bg-black p-5 md:hidden">
+        <img
+          src="/oki-nawa-banner02.png"
+          alt="Okinawa Fitness"
+          className="h-auto w-full origin-center scale-[1.6] object-cover"
+        />
       </section>
 
       {/* ── PROMO BANNER ── */}
