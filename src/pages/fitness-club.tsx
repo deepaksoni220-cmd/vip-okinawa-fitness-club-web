@@ -146,7 +146,7 @@ export default function FitnessClub() {
             <div className="glass-card p-8 text-center">
               <FaEnvelope className="text-4xl text-white mx-auto mb-4" />
               <h3 className="font-heading font-bold text-xl mb-2">Email</h3>
-              <p className="text-gray-300">contact@okinawa.fit</p>
+<p className="text-gray-300">okinawamma12@gmail.com</p>
             </div>
           </div>
           <div className="text-center mt-16">

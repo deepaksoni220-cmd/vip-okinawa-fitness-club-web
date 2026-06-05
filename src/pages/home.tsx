@@ -232,6 +232,7 @@ export default function Home() {
               { icon: <GiPunchingBag />, title: "Karate Classes", desc: "Traditional martial arts focusing on discipline and technique." },
               { icon: <GiBoxingGlove />, title: "MMA Training", desc: "Comprehensive mixed martial arts instruction." },
               { icon: <FaFire />, title: "Weight Loss", desc: "Science-backed programs to shred fat fast." },
+              { icon: <GiMuscleUp />, title: "Sports Nutrition", desc: "Performance-focused meal plans to fuel your training." },
               { icon: <GiMuscleUp />, title: "Personal Training", desc: "1-on-1 coaching tailored to your specific goals." },
               { icon: <FaDumbbell />, title: "Strength & Cond.", desc: "Build explosive power and athletic endurance." },
             ].map((s, i) => (
@@ -562,7 +563,12 @@ export default function Home() {
                   </Select>
                 </div>
               </div>
-              <Button type="submit" className="w-full bg-primary hover:bg-red-700 text-white font-heading text-xl uppercase tracking-wider rounded-none h-16 mt-4 hover:scale-[1.01] transition-transform">
+              <Button type="button" onClick={() => {
+                const subject = "Okinawa Fitness Consultation Request";
+                const body = `Name: ${name}\nPhone: ${phone}\nEmail: ${email}\nFitness Goal: ${goal}\n\nPlease contact me for a free consultation and facility tour.`;
+                const whatsappUrl = `https://wa.me/${WA}?text=${encodeURIComponent(`*${subject}*\n\n${body}`)}`;
+                window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+              }} className="w-full bg-primary hover:bg-red-700 text-white font-heading text-xl uppercase tracking-wider rounded-none h-16 mt-4 hover:scale-[1.01] transition-transform">
                 Get Free Consultation
               </Button>
             </form>
@@ -601,7 +607,7 @@ export default function Home() {
               <ul className="space-y-4 text-gray-400 text-sm">
                 <li className="flex items-start gap-3">
                   <FaMapMarkerAlt className="text-primary mt-1 shrink-0" />
-                  <span>987, Jawaharlal Nehru Rd, New Nana Peth, Ganesh Peth, Pune, Maharashtra 411002</span>
+<span>987,above Milan hotel, Jawaharlal Nehru Rd, New Nana Peth, Ganesh Peth, Pune, Maharashtra 411002</span>
                 </li>
                 <li className="flex items-center gap-3"><FaPhoneAlt className="text-primary shrink-0" /><span>+91 96658 61956</span></li>
 <li className="flex items-center gap-3"><FaEnvelope className="text-primary shrink-0" /><span>okinawamma12@gmail.com</span></li>

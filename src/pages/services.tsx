@@ -15,7 +15,7 @@ const gymPlans = [
     label: "Personal Training",
 price: "₹12,000",
     duration: "Monthly",
-    features: ["Dedicated 1-on-1 coaching", "Custom workout plan", "Nutrition guidance", "Progress tracking"],
+    features: ["Dedicated 1-on-1 coaching", "Custom workout plan", "Nutrition guidance", "Progress tracking", "Sports nutrition"],
     highlight: false,
   },
   {
