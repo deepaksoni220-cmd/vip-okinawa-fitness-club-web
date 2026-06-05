@@ -6,15 +6,16 @@ import { GiBoxingGlove, GiMuscleUp, GiPunchingBag } from "react-icons/gi";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { toast } from "sonner";
-import { Toaster } from "@/components/ui/sonner";
+import { toast, Toaster } from "sonner";
 import Navbar from "@/components/Navbar";
+import { getWhatsAppLink } from "@/components/WhatsAppFloating";
 
 const WA = "919665861956";
 
 function waLink(message: string) {
   return `https://wa.me/${WA}?text=${encodeURIComponent(message)}`;
 }
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -30,7 +31,7 @@ export default function Home() {
     e.preventDefault();
     const subject = "Okinawa Fitness Consultation Request";
     const body = `Name: ${name}\nPhone: ${phone}\nEmail: ${email}\nFitness Goal: ${goal}\n\nPlease contact me for a free consultation and facility tour.`;
-    const mailto = `mailto:okinawamma12@gmail.com&okinawafitness11@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const mailto = `mailto:okinawamma12@gmail.com,okinawafitness11@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     window.location.href = mailto;
     toast.success("Opening your email client...", { description: "Send the email to complete your request." });
   };
@@ -38,12 +39,14 @@ export default function Home() {
   useEffect(() => {
     const ctx = gsap.context(() => {
       // Hero text reveal
-      gsap.from(".hero-title-word", {
-        y: 100, opacity: 0, duration: 1, stagger: 0.1, ease: "power4.out", delay: 0.2,
-      });
       gsap.from(".hero-subtitle", {
-        y: 30, opacity: 0, duration: 1, ease: "power3.out", delay: 0.8,
+        y: 30,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out",
+        delay: 0.8,
       });
+
       gsap.from(".hero-btn", {
         y: 20, opacity: 0, duration: 0.8, stagger: 0.2, ease: "power3.out", delay: 1.2,
       });
@@ -62,22 +65,6 @@ export default function Home() {
           innerHTML: target, duration: 2, snap: { innerHTML: 1 }, ease: "power1.inOut",
         });
       });
-
-      // Navbar scroll effect
-      ScrollTrigger.create({
-        start: "top -50",
-        onUpdate: (self) => {
-          const nav = document.querySelector("nav");
-          if (!nav) return;
-          if (self.direction === 1 || self.progress > 0) {
-            nav.classList.add("bg-black/90", "backdrop-blur-md", "border-b", "border-white/10");
-            nav.classList.remove("bg-transparent");
-          } else {
-            nav.classList.remove("bg-black/90", "backdrop-blur-md", "border-b", "border-white/10");
-            nav.classList.add("bg-transparent");
-          }
-        },
-      });
     }, containerRef);
 
     return () => ctx.revert();
@@ -85,8 +72,6 @@ export default function Home() {
 
   return (
     <div ref={containerRef} className="min-h-screen bg-[#0a0a0a] text-white selection:bg-primary selection:text-white overflow-x-hidden">
-      <Toaster theme="dark" />
-
       <Navbar />
 
       {/* ── HERO ── */}
@@ -106,13 +91,13 @@ export default function Home() {
         </div>
         <div className="absolute top-1/4 left-1/4 hidden w-64 h-64 bg-primary/20 rounded-full blur-[100px] z-0 floating-orb md:block" />
         <div className="absolute bottom-1/4 right-1/4 hidden w-96 h-96 bg-secondary/10 rounded-full blur-[120px] z-0 floating-orb md:block" />
-        <div className="container mx-auto hidden px-4 relative z-20 md:block">
+        <div className="container mx-auto px-4 relative z-20 hidden md:block">
           <div className="max-w-3xl">
-            <div className="hidden">
+            <div className="flex gap-4">
               <a href="#memberships">
                 <Button size="lg" className="hero-btn w-full sm:w-auto bg-primary hover:bg-red-700 text-white font-heading text-xl uppercase tracking-wider rounded-none h-14 px-8">Join Now</Button>
               </a>
-              <a href="https://wa.me/919665861956" target="_blank" rel="noopener noreferrer">
+              <a href={getWhatsAppLink()} target="_blank" rel="noopener noreferrer">
                 <Button size="lg" className="hero-btn w-full sm:w-auto bg-[#25D366] hover:bg-[#128C7E] text-white font-heading text-sm uppercase tracking-wider rounded-md h-14 px-6">
                   <FaWhatsapp className="mr-2" size={20} /> WhatsApp
                 </Button>
@@ -146,7 +131,7 @@ export default function Home() {
           className="block md:hidden w-[calc(100%+8px)] max-w-none -translate-x-1 h-auto object-cover"
         />
         <div className="absolute inset-0 flex items-start justify-center bg-gradient-to-b from-black/75 via-black/10 to-transparent px-4 pt-6 text-center md:items-center md:bg-gradient-to-r md:from-black/75 md:via-black/20 md:to-transparent md:px-16 md:pt-0">
-          <h2 className="max-w-[12ch] font-heading text-3xl font-black uppercase leading-tight text-white drop-shadow-[0_4px_18px_rgba(0,0,0,0.9)] sm:text-4xl md:max-w-[11ch] md:text-6xl lg:text-7xl">
+          <h2 className="hero-subtitle max-w-[12ch] font-heading text-3xl font-black uppercase leading-tight text-white drop-shadow-[0_4px_18px_rgba(0,0,0,0.9)] sm:text-4xl md:max-w-[11ch] md:text-6xl lg:text-7xl">
             Okinawa Martial Arts Classes
           </h2>
         </div>
@@ -177,26 +162,12 @@ export default function Home() {
       <section id="about" className="py-24 relative">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div className="relative h-[520px]">
-              {/* glow */}
-              <div className="absolute inset-0 bg-primary/20 blur-[60px] rounded-full" />
-              {/* main image – MMA training */}
-              <img
-                src="https://images.unsplash.com/photo-1581009137042-c552e485697a?q=80&w=1200&auto=format&fit=crop"
+            <div className="relative">
+<img
+                src="/okyaboy.png"
                 alt="MMA Training"
-                className="absolute top-0 left-0 w-[78%] h-[75%] object-cover rounded-sm border border-white/10 z-10 shadow-2xl"
+                className="w-full h-auto object-cover rounded-sm shadow-2xl"
               />
-              {/* secondary image – gym weights floor */}
-              <img
-                src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=800&auto=format&fit=crop"
-                alt="Gym Interior"
-                className="absolute bottom-0 right-0 w-[55%] h-[52%] object-cover rounded-sm border border-primary/30 z-20 shadow-2xl"
-              />
-              {/* badge */}
-              <div className="absolute top-[70%] left-0 glass-panel p-5 rounded-sm z-30 max-w-[180px] hidden md:block border-primary/40 shadow-xl">
-                <FaTrophy className="text-secondary text-3xl mb-2" />
-                <div className="font-heading font-bold text-base uppercase leading-tight">Champion Mindset</div>
-              </div>
             </div>
             <div>
               <h2 className="text-primary font-bold tracking-widest uppercase text-sm mb-2">About Us</h2>
@@ -387,7 +358,7 @@ export default function Home() {
               <h4 className="font-heading font-bold text-xl uppercase mb-1 text-gray-300">Personal Training</h4>
               <p className="text-xs text-gray-500 uppercase tracking-widest mb-5">Monthly</p>
               <div className="flex items-baseline gap-1 mb-6">
-                <span className="text-3xl font-heading font-black text-white">₹10,000</span>
+<span className="text-3xl font-heading font-black text-white">₹12,000</span>
                 <span className="text-gray-500 text-sm font-medium">/-</span>
               </div>
               <ul className="space-y-3 mb-8 text-sm">
@@ -635,7 +606,7 @@ export default function Home() {
                 <li className="flex items-center gap-3"><FaPhoneAlt className="text-primary shrink-0" /><span>+91 96658 61956</span></li>
 <li className="flex items-center gap-3"><FaEnvelope className="text-primary shrink-0" /><span>okinawamma12@gmail.com</span></li>
               </ul>
-              <a href="https://wa.me/919665861956" target="_blank" rel="noopener noreferrer"
+              <a href={getWhatsAppLink()} target="_blank" rel="noopener noreferrer"
                 className="mt-6 inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white text-sm font-bold uppercase tracking-wider px-4 py-3 transition-colors rounded-md">
                 <FaWhatsapp size={18} /> Chat on WhatsApp
               </a>

@@ -13,7 +13,7 @@ function waLink(message: string) {
 const gymPlans = [
   {
     label: "Personal Training",
-    price: "₹10,000",
+price: "₹12,000",
     duration: "Monthly",
     features: ["Dedicated 1-on-1 coaching", "Custom workout plan", "Nutrition guidance", "Progress tracking"],
     highlight: false,
@@ -183,7 +183,7 @@ export default function Services() {
                   <p className="text-secondary font-bold tracking-widest uppercase text-xs mb-2">Okinawa Personal Training</p>
                   <h4 className="text-3xl font-heading font-black uppercase mb-3">Monthly Memberships</h4>
                   <p className="text-gray-400 max-w-xl text-sm leading-relaxed">
-                    Dedicated 1-on-1 training for <span className="text-white font-bold">₹10,000/month</span> and group personal coaching for <span className="text-white font-bold">₹5,000/month</span> per member.
+                    Dedicated 1-on-1 training for <span className="text-white font-bold">₹12,000/month</span> and group personal coaching for <span className="text-white font-bold">₹5,000/month</span> per member.
                   </p>
                 </div>
                 <a
@@ -202,7 +202,7 @@ export default function Services() {
               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
                 <div>
                   <p className="text-secondary font-bold tracking-widest uppercase text-xs mb-2">Okinawa Personal Training</p>
-                  <h4 className="text-3xl font-heading font-black uppercase mb-3">Monthly Membership ₹10,000</h4>
+                  <h4 className="text-3xl font-heading font-black uppercase mb-3">Monthly Membership ₹12,000</h4>
                   <p className="text-gray-400 max-w-xl text-sm leading-relaxed">Dedicated personal training package tailored for serious results. Includes custom workout plans, nutrition guidance, and one-on-one coaching.</p>
                 </div>
                 <a
@@ -211,7 +211,7 @@ export default function Services() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 rounded-md bg-secondary hover:bg-yellow-500 text-black font-black uppercase tracking-wider text-sm px-6 py-4 transition-colors duration-300"
                 >
-                  <FaWhatsapp size={18} /> Join Us Now
+                  <FaWhatsapp size={18} /> Join us Now
                 </a>
               </div>
             </div>
