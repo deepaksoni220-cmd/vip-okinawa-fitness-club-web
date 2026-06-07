@@ -129,7 +129,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-heading font-bold uppercase text-sm mb-1">Address</h4>
-                    <p className="text-gray-400 text-sm leading-relaxed">987, Jawaharlal Nehru Rd, New Nana Peth, Ganesh Peth, Pune 411002</p>
+                    <p className="text-gray-400 text-sm leading-relaxed">987, above milan hotel, Jawaharlal Nehru Rd, New Nana Peth, Ganesh Peth, Pune 411002</p>
                   </div>
                 </div>
                 <div className="glass-card p-6 flex gap-4 items-start">
@@ -158,8 +158,8 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-heading font-bold uppercase text-sm mb-1">Hours</h4>
-                    <p className="text-gray-400 text-sm">Mon–Sat: 6 AM – 9 PM</p>
-                    <p className="text-gray-400 text-sm">Sun: 8 AM – 1 PM</p>
+                    <p className="text-gray-400 text-sm">Mon–Sat: 5 AM – 12 AM</p>
+                    <p className="text-gray-400 text-sm">Sun: 10 AM – 2 PM</p>
                   </div>
                 </div>
               </div>
